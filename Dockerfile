@@ -37,7 +37,7 @@ COPY --link . .
 
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
-
+RUN chmod -R 777 public
 
 # Final stage for app image
 FROM base

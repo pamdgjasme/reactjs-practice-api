@@ -2,7 +2,7 @@
 
 class Listing < ApplicationRecord
   has_many :booking_photos
-  has_many :listing_photos
+  has_many :listing_photos, dependent: :destroy
 
   accepts_nested_attributes_for :listing_photos, allow_destroy: true
 
