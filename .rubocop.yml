@@ -1,0 +1,11 @@
+Style/Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+AllCops:
+  Exclude:
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - db/**/*
+    - db/schema.rb
+    - bin/*

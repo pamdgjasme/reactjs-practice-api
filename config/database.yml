@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+
+development:
+  <<: *default
+  database: travel_api_development
+
+test:
+  <<: *default
+  database: travel_api_test
