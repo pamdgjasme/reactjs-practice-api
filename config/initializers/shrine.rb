@@ -19,7 +19,7 @@ else
 
   Shrine.storages = {
     cache: Shrine::Storage::S3.new(prefix: 'cache', **s3_options), # temporary
-    store: Shrine::Storage::S3.new(**s3_options) # permanent
+    store: Shrine::Storage::S3.new(public: true, **s3_options) # permanent
   }
 end
 
