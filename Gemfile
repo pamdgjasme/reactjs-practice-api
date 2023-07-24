@@ -50,3 +50,5 @@ gem "shrine", "~> 3.5"
 gem "dockerfile-rails", ">= 1.5", :group => :development
 
 gem "redis", "~> 5.0"
+
+gem "aws-sdk-s3", require: false
