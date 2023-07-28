@@ -10,7 +10,7 @@ class Api::Admin::ListingsController < ApplicationController
   def create
     new_listing = Listing.new(permitted_params)
     if new_listing.save
-      render json: new_listing
+      render json: new_listing.attributes.merge({ photos: photos_builder(new_listing) })
     else
       render json: { error: new_listing.errors.full_messages }
     end
